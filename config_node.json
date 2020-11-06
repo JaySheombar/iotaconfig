@@ -1,0 +1,122 @@
+{
+  "useProfile": "auto",
+  "httpAPI": {
+    "basicAuth": {
+      "enabled": false,
+      "username": "",
+      "passwordHash": "",
+      "passwordSalt": ""
+    },
+    "excludeHealthCheckFromAuth": false,
+    "permitRemoteAccess": [
+      "getNodeInfo",
+      "getBalances",
+      "checkConsistency",
+      "getTipInfo",
+      "getTransactionsToApprove",
+      "getInclusionStates",
+      "getNodeAPIConfiguration",
+      "wereAddressesSpentFrom",
+      "broadcastTransactions",
+      "findTransactions",
+      "storeTransactions",
+      "attachToTangle",
+      "getTrytes"
+    ],
+    "permittedRoutes": [
+      "healthz"
+    ],
+    "whitelistedAddresses": [],
+    "bindAddress": "0.0.0.0:14265",
+    "limits": {
+      "bodyLengthBytes": 1000000,
+      "findTransactions": 1000,
+      "getTrytes": 1000,
+      "requestsList": 1000
+    }
+  },
+  "dashboard": {
+    "bindAddress": "localhost:8081",
+    "theme": "default",
+    "basicAuth": {
+      "enabled": false,
+      "username": "",
+      "passwordHash": "",
+      "passwordSalt": ""
+    }
+  },
+  "snapshots": {
+    "loadType": "global",
+    "global": {
+      "path": "snapshot.csv",
+      "spentAddressesPaths": [],
+      "index": 0
+    },
+    "pruning": {
+      "enabled": true,
+      "delay": 60480
+    }
+  },
+  "spentAddresses": {
+    "enabled": true
+  },
+  "network": {
+    "preferIPv6": false,
+    "autopeering": {
+      "bindAddress": "0.0.0.0:14626",
+      "runAsEntryNode": false,
+      "entryNodes": ["2FbaaRnLiFapfVupBt4heC1eRfhuTB91fkdmu1aZqNnz@192.168.0.31:14626"],
+      "seed": ""
+    }
+  },
+  "node": {
+    "alias": "Node",
+    "showAliasInGetNodeInfo": false,
+    "disablePlugins": [],
+    "enablePlugins": []
+  },
+  "coordinator": {
+    "address": "9FEPBBXXYZVAOKTGTUWQKTRKWYDORIQBGIKNSSUOZWWGLXTQEKZKUFQKHVVGGMWFDIL9EPPGTLSPTWMEA",
+    "securityLevel": 2,
+    "merkleTreeDepth": 18,
+    "mwm": 5,
+    "stateFilePath": "coordinator.state",
+    "merkleTreeFilePath": "coordinator.tree",
+    "intervalSeconds": 60,
+    "checkpoints": {
+      "maxTrackedTails": 10000
+    }
+},
+  "logger": {
+    "level": "info",
+    "disableCaller": true,
+    "encoding": "console",
+    "outputPaths": [
+      "stdout"
+    ]
+  },
+  "spammer": {
+    "address": "HORNET99INTEGRATED99SPAMMER999999999999999999999999999999999999999999999999999999",
+    "message": "Spamming with HORNET tipselect",
+    "tag": "HORNET99INTEGRATED99SPAMMER",
+    "tagSemiLazy": "",
+    "cpuMaxUsage": 0.8,
+    "tpsRateLimit": 0.0,
+    "bundleSize": 1,
+    "valueSpam": false,
+    "workers": 0,
+    "autostart": false
+  },
+  "zmq": {
+    "bindAddress": "localhost:5556"
+  },
+  "profiling": {
+    "bindAddress": "localhost:6060"
+  },
+  "prometheus": {
+    "bindAddress": "localhost:9311",
+    "goMetrics": false,
+    "processMetrics": false,
+    "promhttpMetrics": false
+  }
+}

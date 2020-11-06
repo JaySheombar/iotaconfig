@@ -65,7 +65,7 @@
     "autopeering": {
       "bindAddress": "0.0.0.0:14626",
       "runAsEntryNode": false,
-      "entryNodes": ["DrWy2goiC4XrZKWfPoDPGpB9y5fro9n43jw3L3SH97JZ@192,168.0.31"],
+      "entryNodes": ["2FbaaRnLiFapfVupBt4heC1eRfhuTB91fkdmu1aZqNnz@192.168.0.31:14626"],
       "seed": ""
     }
   },
@@ -76,7 +76,7 @@
     "enablePlugins": ["Coordinator"]
   },
   "coordinator": {
-    "address": "",
+    "address": "9FEPBBXXYZVAOKTGTUWQKTRKWYDORIQBGIKNSSUOZWWGLXTQEKZKUFQKHVVGGMWFDIL9EPPGTLSPTWMEA",
     "securityLevel": 2,
     "merkleTreeDepth": 18,
     "mwm": 5,
